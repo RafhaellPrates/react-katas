@@ -1,0 +1,11 @@
+/* Estilo é livre — capriche aqui quando a lógica estiver funcionando.
+   A prioridade do kata é a LÓGICA (estado, validação, renderização
+   condicional, casos de borda), não o visual. */
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
