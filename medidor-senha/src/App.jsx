@@ -1,14 +1,25 @@
-// 👇 Aqui VOCÊ constrói o Medidor de Força de Senha.
-// Siga as issues do repositório, UMA de cada vez, e os critérios
-// de aceite do README desta pasta. Comece pela issue #1.
-//
-// O Claude revisa depois — mas o código é seu. 💪
+import { useState } from 'react';
+import './index.css'
 
 function App() {
+
+  const [senha ,setSenha] = useState('')
+
+  function inputChange(event){
+    setSenha(event.target.value)
+
+  }
+  
   return (
+
+    
     <main>
       <h1>Medidor de Força de Senha</h1>
-      {/* TODO (issue #1): campo de senha controlado com useState */}
+        <div>
+          <p>Senha: <input value={senha} onChange={inputChange} /></p>
+          
+        </div>
+
     </main>
   )
 }
