@@ -67,14 +67,25 @@ function App() {
       </div>)
 
     } else if( forca.length >4 ){
-
       return(<div>
         <p style={{color:'green'}}> senha forte</p>
-        
       </div>)
     }  
   }
-  
+  function butt(pass){
+
+    let botao = true
+
+    const estado = pass.filter(p => p.check === true)
+    
+    if( estado.length === 5){
+      botao = false
+    }
+    
+    return (
+      <button disabled={botao}>Cadastrar </button> 
+    )
+  }
   
   return (
     
@@ -84,6 +95,7 @@ function App() {
           <p>Senha: <input type='password' value={senha} onChange={inputChange} /></p>
             {renderiza(pass)}
             {medirForca(pass)}
+            {butt(pass)}
             
         </div>
 
