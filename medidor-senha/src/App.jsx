@@ -81,7 +81,7 @@ function App() {
     <main>
       <h1>Medidor de Força de Senha</h1>
         <div>
-          <p>Senha: <input value={senha} onChange={inputChange} /></p>
+          <p>Senha: <input type='password' value={senha} onChange={inputChange} /></p>
             {renderiza(pass)}
             {medirForca(pass)}
             
